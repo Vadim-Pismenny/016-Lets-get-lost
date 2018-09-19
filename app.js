@@ -1,14 +1,18 @@
 new Vue({
     el: '#vue-app',
     data: {
-
+      avalibale: false,
+      nearby: false
     },
     methods: {
-      logName: function(){
-        console.log('you entered you name');
-      },
-      logAge: function(){
-        console.log('you entered you age');
+
+    },
+    computed: {
+      compClasses:function(){
+        return {
+          avalibale:this.avalibale,
+          nearby:this.nearby
+        }
       }
     }
 });
